@@ -1,0 +1,12 @@
+tags:
+   - name: helo world
+get:
+    description: menyapa hello world
+reponses:
+    '200':
+        description: Successful repsponse
+    '400':
+        description: Bad request
+    '500':
+        description: Internal server error
+

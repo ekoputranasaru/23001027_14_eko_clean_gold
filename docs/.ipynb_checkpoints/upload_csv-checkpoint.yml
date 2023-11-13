@@ -1,0 +1,14 @@
+tags:
+  - name: Upload Data CSV
+get:
+  description: Upload data CSV
+parameters:
+  - name: file
+    in: formData
+    type: file
+    required: true
+responses:
+  200:
+    description: File berhasil diunggah
+  400:
+    description: Tidak ada bagian file / Tidak ada file yang dipilih / Jenis file tidak diizinkan (harus berupa file CSV)

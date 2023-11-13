@@ -1,0 +1,20 @@
+tags:
+  - name: Clean Data CSV
+get:
+  description: Clean data CSV
+parameters:
+  - name: file
+    in: formdata
+    type: file
+    required: true
+  - name: kolom
+    in: query
+    type: string
+    required: true
+responses:
+  200:
+    description: Data berhasil dibersihkan dan disimpan dalam file baru
+  400:
+    description: Parameter file tidak ada
+  404:
+    description: File tidak ditemukan

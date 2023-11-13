@@ -1,0 +1,10 @@
+parameters:
+    - name: db_name
+      in: query
+      type: string
+      required: true
+responses:
+    200:
+        description: SQL query executed successfully
+    400:
+        description: Bad request, missing parameters

@@ -1,0 +1,42 @@
+---
+swagger: "2.0"
+info:
+  title: "Text Processing API"
+  description: "API for processing text data"
+  version: "1.0.0"
+basePath: "/"
+
+paths:
+  /text_processing:
+    post:
+      summary: "Process Text Data"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: text
+          description: "List of text data to be processed"
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        200:
+          description: "Text data processed successfully"
+          schema:
+            type: object
+            properties:
+              status_code:
+                type: integer
+                example: 200
+              description:
+                type: string
+                example: "Data Teks yang telah diolah"
+              data:
+                type: array
+                items:
+                  type: string
+                example: ["Cleaned text 1", "Cleaned text 2"]
